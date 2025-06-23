@@ -1,30 +1,14 @@
-package com.example.demo.entity;
+package com.example.demo.projection;
 
-import jakarta.persistence.*;
-
-@Entity
-@Table(name = "persons")
-public class Person {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
+public class PersonDTO {
     private String name;
     private String lastname;
 
-    public Person() {}
+    public PersonDTO() {}
 
-    public Person(String name, String lastname) {
+    public PersonDTO(String name, String lastname) {
         this.name = name;
         this.lastname = lastname;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getName() {
